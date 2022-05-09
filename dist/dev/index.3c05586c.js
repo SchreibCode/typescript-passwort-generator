@@ -526,6 +526,87 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"h7u1C":[function(require,module,exports) {
+var _constants = require("./constants");
+const inputPasswordLength = document.querySelector("[data-length]");
+const spanCurrentLength = document.querySelector("[data-current-length]");
+const inputCapitalLetters = document.querySelector("[data-capital-letters]");
+const inputNumbers = document.querySelector("[data-numbers]");
+const inputSymbols = document.querySelector("[data-symbols]");
+const form = document.querySelector("form");
+const spanPassword = document.querySelector("[data-password]");
+const button = document.querySelector("form button");
+inputPasswordLength.addEventListener("input", (e)=>{
+    const target = e.target;
+    const value = target.value;
+    spanCurrentLength.innerText = value;
+});
+form.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    const length = parseInt(inputPasswordLength.value);
+    const useCapitals = inputCapitalLetters.checked;
+    const useNumbers = inputNumbers.checked;
+    const useSymbols = inputSymbols.checked;
+    spanPassword.innerText = createPassword(length, useCapitals, useNumbers, useSymbols);
+});
+function createPassword(length, useCapitals, useNumbers, useSymbols) {
+    let returnable = "";
+    let options = _constants.LETTERS;
+    if (useCapitals) options += _constants.CAPITAL_LETTERS;
+    if (useNumbers) options += _constants.NUMBERS;
+    if (useSymbols) options += _constants.SYMBOLS;
+    for(let i = 0; i < length; i++){
+        const random = Math.floor(Math.random() * options.length);
+        returnable += options[random];
+    }
+    return returnable;
+}
+button.click();
+
+},{"./constants":"45DZp"}],"45DZp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "NUMBERS", ()=>NUMBERS
+);
+parcelHelpers.export(exports, "SYMBOLS", ()=>SYMBOLS
+);
+parcelHelpers.export(exports, "CAPITAL_LETTERS", ()=>CAPITAL_LETTERS
+);
+parcelHelpers.export(exports, "LETTERS", ()=>LETTERS
+);
+const NUMBERS = "012345679";
+const SYMBOLS = "@!$%&*";
+const CAPITAL_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const LETTERS = "abcdefghijklmnopqrstuvwxyz";
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
 },{}]},["bMUdC","h7u1C"], "h7u1C", "parcelRequire0cec")
 

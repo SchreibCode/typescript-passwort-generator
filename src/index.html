@@ -20,9 +20,7 @@
         </header>
         <main>
             <section>
-                <span class="width-limit" data-password
-                    >vkgDf93#YZ8X61$YZ8X61YZ8X61YZ8X61</span
-                >
+                <span class="width-limit" data-password></span>
             </section>
             <form>
                 <label>
@@ -33,21 +31,25 @@
                             type="range"
                             data-length
                             min="6"
-                            max="60"
+                            max="40"
+                            default="15"
                         />
-                        25</span
+                        <span class="span-current-length" data-current-length
+                            >15</span
+                        ></span
                     >
                 </label>
                 <label>
                     Mit Großbuchstaben (A-Z)
-                    <input type="checkbox" data-capital-letters />
+                    <input type="checkbox" data-capital-letters checked />
                 </label>
                 <label>
                     Mit Zahlen (0-9)
-                    <input type="checkbox" data-numbers />
+                    <input type="checkbox" data-numbers checked />
                 </label>
                 <label>
-                    Mit Symbolen (@!$%&*) <input type="checkbox" data-symbols />
+                    Mit Symbolen (@!$%&*)
+                    <input type="checkbox" data-symbols checked />
                 </label>
                 <label>
                     <button type="submit">

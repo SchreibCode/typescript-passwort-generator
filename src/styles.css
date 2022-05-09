@@ -43,6 +43,10 @@ label {
     border-bottom: 1px solid black;
 }
 
+label:last-child {
+    border-bottom: none;
+}
+
 .container__input-range {
     display: flex;
     align-items: center;
@@ -51,6 +55,11 @@ label {
 
 .input-range {
     width: min(17rem, 40vw);
+}
+
+.span-current-length {
+    min-width: 18.5px;
+    text-align: center;
 }
 
 button {

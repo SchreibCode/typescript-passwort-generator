@@ -41,6 +41,10 @@ label {
   display: flex;
 }
 
+label:last-child {
+  border-bottom: none;
+}
+
 .container__input-range {
   align-items: center;
   gap: 1rem;
@@ -49,6 +53,11 @@ label {
 
 .input-range {
   width: min(17rem, 40vw);
+}
+
+.span-current-length {
+  min-width: 18.5px;
+  text-align: center;
 }
 
 button {
