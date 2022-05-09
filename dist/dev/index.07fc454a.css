@@ -1,0 +1,79 @@
+body {
+  color: #fff;
+}
+
+header {
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+section, form {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+section {
+  background-color: var(--color-secondary-dark-500);
+  word-break: break-all;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  font-size: 2rem;
+}
+
+label, .width-limit {
+  width: clamp(0px, 100%, 800px);
+  padding: 2rem;
+}
+
+label {
+  border-bottom: 1px solid #000;
+  justify-content: space-between;
+  display: flex;
+}
+
+.container__input-range {
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+}
+
+.input-range {
+  width: min(17rem, 40vw);
+}
+
+button {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: var(--font-family);
+  border: 0;
+  border-radius: .3rem;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem 1.5rem;
+  display: flex;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 447.999px) {
+  button {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=index.07fc454a.css.map */

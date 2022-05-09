@@ -1,0 +1,22 @@
+{
+    "name": "typescript-passwort-generator",
+    "version": "1.0.0",
+    "description": "Passwort Generator mit TypeScript",
+    "scripts": {
+        "start": "parcel serve src/index.html --dist-dir dist/dev",
+        "build": "parcel build src/index.html --dist-dir dist/build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SchreibCode/typescript-passwort-generator.git"
+    },
+    "author": "Marvin Scheffold",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/SchreibCode/typescript-passwort-generator/issues"
+    },
+    "homepage": "https://github.com/SchreibCode/typescript-passwort-generator#readme",
+    "dependencies": {
+        "parcel": "^2.5.0"
+    }
+}
