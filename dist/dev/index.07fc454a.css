@@ -25,6 +25,7 @@ section, form {
 section {
   background-color: var(--color-secondary-dark-500);
   word-break: break-all;
+  min-height: 10rem;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   font-size: 2rem;

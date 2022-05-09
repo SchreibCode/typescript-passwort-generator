@@ -15,7 +15,7 @@ const spanPassword = document.querySelector<HTMLSpanElement>("[data-password]");
 const button = document.querySelector<HTMLButtonElement>("form button");
 
 inputPasswordLength.addEventListener("input", (e) => {
-    const target = e.target as HTMLInputElement;
+    const target = <HTMLInputElement>e.target;
     const value = target.value;
     spanCurrentLength.innerText = value;
 });
