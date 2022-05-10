@@ -13,7 +13,7 @@
 /build
 
 # parce
-/.parce-cache
+/.parcel-cache
 
 # misc
 .idea/
