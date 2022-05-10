@@ -51,8 +51,6 @@ function createPassword(
         returnable += options[random];
     }
 
-    console.log("test");
-
     return returnable;
 }
 
